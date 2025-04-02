@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Criar uma variavel em css o nome dela tem que começar com dois traços (--) */
+/* variavel global */
+:root {
+  --primary-color: rgb(127, 255, 212);
+  --primary-color-darker: rgb(56, 214, 161);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* para usar a variavel basta colocar var e o nome da variavel entre parênteses */
+  background: var(--primary-color);
+  font-family: "Open sans";
+  font-size: 1.3em;
+  line-height: 1.5em; /* altura da linha */
+}
+
+#qrcode {
+  margin-top: 20px;
+}
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  padding: 0 20px;
+  height: 50px;
+  font-size: 24px;
+}
+
+/* Mudar a cor do input quando clicar nele ou passar o mouse encima */
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+button {
+  border: none;
+  background: var(--primary-color);
+  color: #080707;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+form button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+/* Quando clicar no botão aparece uma terceira cor */
+form button:active {
+  background-color: rgb(28, 150, 109);
+}
